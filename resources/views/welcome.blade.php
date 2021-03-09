@@ -238,6 +238,8 @@
                     </div>
                 </div>
             </div>
+            <h2 class="text-center">Where to stay</h2>
+            <h3 class="text-center">On the map below we have marked the local hotels all within 10 minutes of the venue.</h3>
             <!-- container end -->
         </section>
         <!-- section end -->
@@ -339,7 +341,7 @@
                                 <div class="col-md-12">
                                     <br/>
                                     <label>Notes</label>
-                                    <textarea name="message" rows="3" class="form-control form-opacity"></textarea>
+                                    <textarea name="notes" rows="3" class="form-control form-opacity"></textarea>
                                 </div>
                                 <div class="col-md-12">
                                     <br/>
@@ -353,20 +355,22 @@
         </section>
         <!-- section end -->
         <!-- registry section -->
-        <section class="cream-background fixed" data-stellar-background-ratio="0.8">
+        <section class="cream-background plane-background fixed" data-stellar-background-ratio="0.8">
             <div class="container text-center">
-                <h2>Registry</h2>
-                <p>We’re lucky enough to have nearly everything we need. And since neither of us has been able to go
-                    abroad together yet, we want our honeymoon to be extra special! If you want to help make it
+                <h2>Our wishes</h2>
+                <p>We can't wait to have you share our day with us!<br>
+                We’re lucky enough to have nearly everything we need. And since neither of us has been able to go
+                    abroad together yet, we want our honeymoon to be extra special! If you would like to help make it
                     unforgettable, you can contribute using the link below.</p>
+                <br><br>
                 <div class="row align-items-center">
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <label for="amount" class="col-form-label">Amount (£)</label>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <input type="number" id="amount" min="0.30" step="0.01" class="form-control input-sm" placeholder="10.00">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <button id="donate" class="btn btn-primary text-center input-sm">Contribute</button>
                     </div>
                 </div>

@@ -85,6 +85,13 @@ h2 {
   margin-bottom: 60px;
 }
 
+.plane-background {
+  background-image: url("/images/plane.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
 #photo_bianca {
   background-image: url("/images/bianca.jpg");
 }
