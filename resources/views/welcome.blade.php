@@ -259,36 +259,44 @@
                 <h2>The Wedding Party</h2>
                 <div class="row text-center">
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_hannah" class="round_image"></div>
                         <h4>Hannah</h4>
+                        <p>Maid of honour</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_bianca" class="round_image"></div>
                         <h4>Bianca</h4>
+                        <p>Bridesmaid</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_rach" class="round_image"></div>
                         <h4>Rach</h4>
+                        <p>Bridesmaid</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_sophie" class="round_image"></div>
                         <h4>Sophie</h4>
+                        <p>Bridesmaid</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_jason" class="round_image"></div>
                         <h4>Jason</h4>
+                        <p>Best man</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_carl" class="round_image"></div>
                         <h4>Carl</h4>
+                        <p>Groomsman</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_mario" class="round_image"></div>
                         <h4>Mario</h4>
+                        <p>Groomsman</p>
                     </div>
                     <div class="col-md-3 round_block">
-                        <div class="round_image"></div>
+                        <div id="photo_simone" class="round_image"></div>
                         <h4>Simone</h4>
+                        <p>Groomsman</p>
                     </div>
                 </div>
             </div>

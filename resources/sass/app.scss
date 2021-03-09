@@ -61,11 +61,13 @@ section {
       position: relative;
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.2);
+      background-size: cover;
     }
   }
 
   .grid {
     display: flex;
+    flex-wrap: wrap;
 
     & > div {
       overflow: hidden;
@@ -73,8 +75,8 @@ section {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: white;
       height: 40vh;
+      max-height: 300px;
       flex-grow: 1;
 
       img {
@@ -100,6 +102,31 @@ h1 {
 h2 {
   font: 400 70px/80px marsha, Dosis;
   margin-bottom: 60px;
+}
+
+#photo_bianca {
+  background-image: url('/images/bianca.jpg');
+}
+#photo_carl {
+  //background-image: url('/images/carl.jpg');
+}
+#photo_sophie {
+  //background-image: url('/images/sophie.jpg');
+}
+#photo_simone {
+  background-image: url('/images/simone.jpg');
+}
+#photo_rach {
+  background-image: url('/images/rach.jpg');
+}
+#photo_mario {
+  background-image: url('/images/mario.jpg');
+}
+#photo_jason {
+  background-image: url('/images/jason.jpeg');
+}
+#photo_hannah {
+  background-image: url('/images/hannah.jpg');
 }
 
 .timeline {
