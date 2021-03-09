@@ -316,11 +316,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Your name*</label>
-                                    <input type="text" name="name" class="form-control form-opacity">
+                                    <input type="text" name="name" class="form-control form-opacity" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label>Your contact number*</label>
-                                    <input type="text" name="contact_number" class="form-control form-opacity">
+                                    <input type="text" name="contact_number" class="form-control form-opacity" required>
                                 </div>
                                 <div class="col-md-12">
                                     <br/><br/>
@@ -329,7 +329,7 @@
                                             <label>Will you attend?</label>
                                         </div>
                                         <div class="col-sm-4">
-                                            <input type="radio" name="attend" value="yes">
+                                            <input type="radio" name="attend" value="yes" required>
                                             <span>Yes, I will be there</span>
                                         </div>
                                         <div class="col-sm-4">
@@ -368,7 +368,7 @@
                         <label for="amount" class="col-form-label">Amount (£)</label>
                     </div>
                     <div class="col-xs-4">
-                        <input type="number" id="amount" min="0.30" step="0.01" class="form-control input-sm" placeholder="10.00">
+                        <input type="number" id="amount" min="0.30" step="0.01" class="form-control input-sm">
                     </div>
                     <div class="col-xs-4">
                         <button id="donate" class="btn btn-primary text-center input-sm">Contribute</button>
