@@ -297,7 +297,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>Your contact number*</label>
-                                    <input type="text" name="number" class="form-control form-opacity">
+                                    <input type="text" name="contact_number" class="form-control form-opacity">
                                 </div>
                                 <div class="col-md-12">
                                     <br/><br/>

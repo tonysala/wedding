@@ -34,11 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         let formData = new FormData(document.getElementById('rsvp-form'));
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'api/rsvp');
+        xhr.open('POST', '/api/rsvp');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.setRequestHeader('Accept', 'application/json');
         xhr.onload = function() {
             if (xhr.status === 200) {
                 alert('Thanks!');
+            } else {
+                alert(xhr.responseText);
             }
         };
         xhr.send(formData);
