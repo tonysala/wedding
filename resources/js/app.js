@@ -1,7 +1,7 @@
 require('./bootstrap');
 
 document.addEventListener("DOMContentLoaded", function () {
-    const finalDate = new Date("2022-07-22 00:00:00").getTime();
+    const finalDate = new Date("2022-07-22").getTime();
 
     const timer = () => {
         const now = new Date().getTime();
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('#hours').textContent = hours;
         document.querySelector('#minutes').textContent = minutes;
         document.querySelector('#seconds').textContent = seconds;
-
     }
     // Calling the function every 1000 milliseconds.
     let interval = setInterval(timer, 1000);
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         xhr.setRequestHeader('Accept', 'application/json');
         xhr.onload = function () {
             if (xhr.status === 200) {
-                alert('Thanks!');
+                location.reload();
             } else {
                 alert(xhr.responseText);
             }

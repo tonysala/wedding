@@ -21,7 +21,7 @@ class RsvpController extends Controller
             'name' => 'required',
             'contact_number' => 'required|string',
             'attend' => 'required|string',
-            'notes' => 'string',
+            'notes' => 'nullable|string',
         ]);
 
         Log::info(json_encode($fields));

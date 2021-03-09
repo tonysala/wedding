@@ -1843,7 +1843,7 @@ module.exports = {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 document.addEventListener("DOMContentLoaded", function () {
-  var finalDate = new Date("2022-07-22 00:00:00").getTime();
+  var finalDate = new Date("2022-07-22").getTime();
 
   var timer = function timer() {
     var now = new Date().getTime();
@@ -1885,7 +1885,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     xhr.onload = function () {
       if (xhr.status === 200) {
-        alert('Thanks!');
+        location.reload();
       } else {
         alert(xhr.responseText);
       }
