@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
     // Calling the function every 1000 milliseconds.
-    interval = setInterval(timer, 1000);
+    let interval = setInterval(timer, 1000);
 
-    document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+    document.getElementById('rsvp-form').addEventListener('submit', function (e) {
         e.preventDefault();
         let formData = new FormData(document.getElementById('rsvp-form'));
         let object = {};
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         xhr.open('POST', '/api/rsvp');
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('Accept', 'application/json');
-        xhr.onload = function() {
+        xhr.onload = function () {
             if (xhr.status === 200) {
                 alert('Thanks!');
             } else {
@@ -47,5 +47,35 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
         xhr.send(JSON.stringify(object));
+    });
+
+    // Donations
+    let stripe = Stripe('pk_live_51IN4zeEsMnHooy9laxk40JxfAoD02skA8fHzPCR3ej9XvRidoZiHUJfS6oz81AgfLF3yIuC7noAQeV486puGwuKV00gsgioeaz');
+    let donate_button = document.getElementById('donate');
+
+    donate_button.addEventListener('click', function() {
+        // Create a new Checkout Session using the server-side endpoint you
+        // created in step 3.
+        fetch('/api/donate', {
+            method: 'POST',
+            body: JSON.stringify({ "amount": document.getElementById('amount').value })
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (session) {
+                return stripe.redirectToCheckout({sessionId: session.id});
+            })
+            .then(function (result) {
+                // If `redirectToCheckout` fails due to a browser or network
+                // error, you should display the localized error message to your
+                // customer using `error.message`.
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            })
+            .catch(function (error) {
+                console.error('Error:', error);
+            });
     });
 });

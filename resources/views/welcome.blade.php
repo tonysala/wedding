@@ -8,7 +8,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGVYH9S0RC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-DGVYH9S0RC');
     </script>
@@ -16,6 +20,7 @@
     <link href="css/app.css" rel="stylesheet">
     <!-- JS -->
     <script src="js/app.js" type="application/javascript"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <!-- Library CSS -->
     <link href="css/glanz_library.css" rel="stylesheet">
     <!-- Icons CSS -->
@@ -173,7 +178,8 @@
         <section class="cream-background large-section fixed">
             <div class="container text-center">
                 <h2>Day Plan</h2>
-                <h3>As we are having a later wedding, food will not served until around 5:30pm so please make sure you've had your lunch.</h3>
+                <h3>As we are having a later wedding, food will not served until around 5:30pm so please make sure
+                    you've had your lunch.</h3>
                 <div class="timeline">
                     <div class="timeline-box">
                         <div class="timeline-container">
@@ -345,6 +351,17 @@
                 <p>We’re lucky enough to have nearly everything we need. And since neither of us has been able to go
                     abroad together yet, we want our honeymoon to be extra special! If you want to help make it
                     unforgettable, you can contribute using the link below.</p>
+                <div class="row align-items-center">
+                    <div class="col-sm-4">
+                        <label for="amount" class="col-form-label">Amount (£)</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="number" id="amount" min="0.30" step="0.01" class="form-control input-sm" placeholder="10.00">
+                    </div>
+                    <div class="col-sm-4">
+                        <button id="donate" class="btn btn-primary text-center input-sm">Contribute</button>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- section end -->
