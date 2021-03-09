@@ -92,7 +92,7 @@ h2 {
   background-image: url("/images/plane.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
+  background-size: contain;
 }
 
 #photo_bianca {
