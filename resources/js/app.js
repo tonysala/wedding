@@ -33,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('rsvp-form').addEventListener('submit', function(e) {
         e.preventDefault();
         let formData = new FormData(document.getElementById('rsvp-form'));
+        let object = {};
+        formData.forEach((value, key) => object[key] = value);
         let xhr = new XMLHttpRequest();
         xhr.open('POST', '/api/rsvp');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('Accept', 'application/json');
         xhr.onload = function() {
             if (xhr.status === 200) {
@@ -44,6 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert(xhr.responseText);
             }
         };
-        xhr.send(formData);
+        xhr.send(JSON.stringify(object));
     });
 });

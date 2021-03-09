@@ -1874,9 +1874,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById('rsvp-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var formData = new FormData(document.getElementById('rsvp-form'));
+    var object = {};
+    formData.forEach(function (value, key) {
+      return object[key] = value;
+    });
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/api/rsvp');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Accept', 'application/json');
 
     xhr.onload = function () {
@@ -1887,7 +1891,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
 
-    xhr.send(formData);
+    xhr.send(JSON.stringify(object));
   });
 });
 
