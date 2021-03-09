@@ -12,6 +12,9 @@ section.navy-background {
 section.navy-background h1, section.navy-background h2, section.navy-background h3, section.navy-background h4, section.navy-background p, section.navy-background span, section.navy-background label {
   color: #f9f0e4;
 }
+section.navy-background .btn {
+  background-color: white;
+}
 section.cream-background {
   background-color: #f9f0e4;
 }
