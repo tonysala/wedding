@@ -1871,10 +1871,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   interval = setInterval(timer, 1000);
-  document.getElementById('rsvp-form').addEventListener('submit', function () {
+  document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+    e.preventDefault();
     var formData = new FormData(document.getElementById('rsvp-form'));
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'Components/myTest.cfc?method=testForm');
+    xhr.open('POST', 'api/rsvp');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {

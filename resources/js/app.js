@@ -30,14 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Calling the function every 1000 milliseconds.
     interval = setInterval(timer, 1000);
 
-    document.getElementById('rsvp-form').addEventListener('submit', function() {
+    document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+        e.preventDefault();
         let formData = new FormData(document.getElementById('rsvp-form'));
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'Components/myTest.cfc?method=testForm');
+        xhr.open('POST', 'api/rsvp');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function() {
             if (xhr.status === 200) {
-                alert('Thanks!')
+                alert('Thanks!');
             }
         };
         xhr.send(formData);
