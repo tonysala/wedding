@@ -1871,6 +1871,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   interval = setInterval(timer, 1000);
+  document.getElementById('rsvp-form').addEventListener('submit', function () {
+    var formData = new FormData(document.getElementById('rsvp-form'));
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'Components/myTest.cfc?method=testForm');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        alert('Thanks!');
+      }
+    };
+
+    xhr.send(formData);
+  });
 });
 
 /***/ }),

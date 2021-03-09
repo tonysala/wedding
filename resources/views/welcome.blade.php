@@ -166,7 +166,7 @@
         <section class="cream-background large-section fixed">
             <div class="container text-center">
                 <h2>Day Plan</h2>
-                <h3>As we are having a later wedding food will not served until around 5:30pm so please make sure you've had your lunch.</h3>
+                <h3>As we are having a later wedding, food will not served until around 5:30pm so please make sure you've had your lunch.</h3>
                 <div class="timeline">
                     <div class="timeline-box">
                         <div class="timeline-container">
@@ -289,15 +289,15 @@
                         height="180" alt=""></p>
                 <div class="row">
                     <div class="col-md-8 col-md-push-2">
-                        <form action="rsvp" method="POST">
+                        <form id="rsvp-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Your name*</label>
                                     <input type="text" name="name" class="form-control form-opacity">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>Your e-mail*</label>
-                                    <input type="text" name="email" class="form-control form-opacity">
+                                    <label>Your contact number*</label>
+                                    <input type="text" name="number" class="form-control form-opacity">
                                 </div>
                                 <div class="col-md-12">
                                     <br/><br/>
@@ -306,11 +306,11 @@
                                             <label>Will you attend?</label>
                                         </div>
                                         <div class="col-sm-4">
-                                            <input type="radio" name="attend" value="Yes, I will be there">
+                                            <input type="radio" name="attend" value="yes">
                                             <span>Yes, I will be there</span>
                                         </div>
                                         <div class="col-sm-4">
-                                            <input type="radio" name="attend" value="Sorry, I can't come">
+                                            <input type="radio" name="attend" value="no">
                                             <span>Sorry, I can't come</span>
                                         </div>
                                     </div>

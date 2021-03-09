@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RsvpController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/rsvp', [RsvpController::class, 'register']);
+Route::post('/rsvp', [RsvpController::class, 'store']);
