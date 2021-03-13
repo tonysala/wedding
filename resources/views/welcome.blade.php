@@ -178,7 +178,7 @@
         <section class="cream-background large-section fixed">
             <div class="container text-center">
                 <h2>Day Plan</h2>
-                <h3>As we are having a later wedding, food will not served until around 5:30pm so please make sure
+                <h3>As we are having a later wedding, food will not be served until around 5:30pm so please make sure
                     you've had your lunch.</h3>
                 <div class="timeline">
                     <div class="timeline-box">
