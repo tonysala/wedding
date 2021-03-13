@@ -74,6 +74,7 @@
         <div class="container text-center">
             <div class="slide_txt slide_center_middle text-center">
                 <h2>Emma &amp; Tony<br>22 July, 2022</h2>
+                <h4><a href="#rsvp">RSVP</a></h4>
             </div>
         </div>
         <!-- container end -->
@@ -306,7 +307,7 @@
         </section>
         <!-- section end -->
         <!-- rsvp section -->
-        <section class="navy-background fixed" data-stellar-background-ratio="0.8">
+        <section id="rsvp" class="navy-background fixed" data-stellar-background-ratio="0.8">
             <div class="container text-center">
                 <p><img src="images/animations/rsvp_wh.gif" data-bottom-top="@src:images/animations/rsvp_wh.gif"
                         height="180" alt=""></p>
